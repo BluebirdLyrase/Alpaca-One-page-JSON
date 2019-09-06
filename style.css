@@ -1,0 +1,32 @@
+
+
+.AlpacaNavbar{
+    background-color: rgb(255, 163, 26);
+    }
+
+.AlpacaCurrent{
+    background-color: rgb(173, 232, 105);
+}
+
+.AlpacaNavBlock{
+    text-align:center;
+    margin: auto;
+    width:100%;
+    font-size: 50px;
+    }
+
+.AlpacaNavText
+{
+    font-size: 10px;
+    margin-top: 5px;
+    color:white;
+    }
+
+.AlpacaNavIcon{
+    
+    font-size: 30px;
+    margin-top: 5px;
+    color:white;
+    
+}
+
