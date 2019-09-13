@@ -9,13 +9,39 @@ document.addEventListener('init', function (event) {
             menu.open();
         });
     }
+    ///////////////////change tabbar color//////////////////
+    $("#tabbar1").click(function () {
+        $(this).attr("style", "background-color: rgb(173, 232, 105);");
+        $("#tabbar2").attr("style", "background-color: rgb(255, 163, 26);");
+        $("#tabbar3").attr("style", "background-color: rgb(255, 163, 26);");
+        $("#tabbar4").attr("style", "background-color: rgb(255, 163, 26);");
+    });
+    $("#tabbar2").click(function () {
+        $(this).attr("style", "background-color: rgb(173, 232, 105);");
+        $("#tabbar1").attr("style", "background-color: rgb(255, 163, 26);");
+        $("#tabbar3").attr("style", "background-color: rgb(255, 163, 26);");
+        $("#tabbar4").attr("style", "background-color: rgb(255, 163, 26);");
+    });
+    $("#tabbar3").click(function () {
+        $(this).attr("style", "background-color: rgb(173, 232, 105);");
+        $("#tabbar1").attr("style", "background-color: rgb(255, 163, 26);");
+        $("#tabbar2").attr("style", "background-color: rgb(255, 163, 26);");
+        $("#tabbar4").attr("style", "background-color: rgb(255, 163, 26);");
+    });
+    $("#tabbar4").click(function () {
+        $(this).attr("style", "background-color: rgb(173, 232, 105);");
+        $("#tabbar1").attr("style", "background-color: rgb(255, 163, 26);");
+        $("#tabbar2").attr("style", "background-color: rgb(255, 163, 26);");
+        $("#tabbar3").attr("style", "background-color: rgb(255, 163, 26);");
+    });
+    ///////////////////end of change tabbar color//////////////////
 
     if (page.id === "sidemenu") {
         //Code for sidemenu
-        $("#homebtn").click(function () {
+        $("#regisbtn").click(function () {
             var content = document.getElementById('content');
             var menu = document.getElementById('menu');
-            content.load('tabbar.html')
+            content.load('regis.html')
                 .then(menu.close.bind(menu));
         });
         $("#loginbtn").click(function () {
@@ -29,7 +55,7 @@ document.addEventListener('init', function (event) {
     if (page.id === 'tab1') {
         //Code for Tab 1
         $("#btn1").click(function () {
-            ons.notification.alert("Hello");
+            alert("Hello");
         });
     }
 

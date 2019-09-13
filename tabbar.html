@@ -1,21 +1,38 @@
 <ons-page id="tabbar">
-    <ons-toolbar>
+    <ons-toolbar style="height: 55px; background-color: rgb(255, 163, 26);">
         <div class="left">
             <!-- Toolbar-button with different icons depending on the platform. -->
-            <ons-toolbar-button component="button/menu" id="menubtn">
-                <ons-icon icon="ion-navicon, material:md-menu" size="32px, material:24px"></ons-icon>
+            <ons-toolbar-button component="button/menu" id="menubtn"><i class="fas fa-bars AlpacaIconBig"></i>
             </ons-toolbar-button>
         </div>
-        <div class="center">Todos</div>
-        <div class="right">
-            <ons-toolbar-button component="button/new-task">New</ons-toolbar-button>
-        </div>
+
+        <div class="center" style=" color:white; font-size: 25px; text-align:center;">Title</div>
+
     </ons-toolbar>
+
+
+    
     <!-- Auto-positioned Tabbar: top on Android, bottom on iOS/other. -->
-    <ons-tabbar id="myTabbar" position="auto">
-        <ons-tab page="tab1.html" label="Tab 1" active>
+    <ons-tabbar id="myTabbar" position="auto" >
+        <ons-tab id="tabbar1" page="tab/Resturant.html"  active style="background-color: rgb(173, 232, 105);">
+                <i class="fas fa-store AlpacaIcon">
+                        <div class="AlpacaIconText">Resturant</div>
+                    </i>
         </ons-tab>
-        <ons-tab page="tab2.html" label="Tab 2">
+        <ons-tab id="tabbar2" page="tab/Food.html" style="background-color: rgb(255, 163, 26);">
+                <i class="fas fa-utensils AlpacaIcon">
+                        <div class="AlpacaIconText">Food</div>
+                    </i>
+        </ons-tab>
+        <ons-tab id="tabbar3" page="tab/Category.html" style="background-color: rgb(255, 163, 26);">
+                <i class="fas fa-clipboard AlpacaIcon">
+                        <div class="AlpacaIconText">Category</div>
+                    </i>
+        </ons-tab>
+        <ons-tab id="tabbar4" page="tab/Basket.html"  style="background-color: rgb(255, 163, 26);">
+                <i class="fas fa-shopping-basket AlpacaIcon">
+                        <div class="AlpacaIconText">Basket</div>
+                    </i>
         </ons-tab>
       </ons-tabbar>
 </ons-page>
