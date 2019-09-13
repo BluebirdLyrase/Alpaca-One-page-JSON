@@ -5,108 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Onsen App</title>
+
     <script src="lib/onsen/js/onsenui.js"></script>
-    <script src="lib/JQuery/jQuery.js"></script>
-    <script src="js/app.js"></script>
+    <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+    <script src="./js/app.js"></script>
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
     <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
-    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-
+    <!-- First navigation component: Navigator. This will remain always on top of the app. -->
     <ons-navigator id="myNavigator" page="splitter.html">
     </ons-navigator>
 
+    <!-- Second navigation component: Splitter. This will disappear if the first component changes its content. -->
     <template id="splitter.html">
         <ons-page>
             <ons-splitter id="mySplitter">
-                <ons-splitter-side id="menu"page="menu.html" swipeable width="250px" collapse swipe-target-width="50px">
+                <ons-splitter-side id="menu" page="menu.html" swipeable width="250px" collapse swipe-target-width="50px">
                 </ons-splitter-side>
-                <ons-splitter-content page="tabbar.html">
+                <ons-splitter-content id="content" page="tabbar.html">
                 </ons-splitter-content>
             </ons-splitter>
         </ons-page>
     </template>
-
-
-    <!-- Third navigation component: Tabbar. This will disappear if the first or second components change their content. -->
-    <template id="tabbar.html">
-        <ons-page id="tabbarPage">
-            <ons-toolbar>
-                <div class="left">
-                    <!-- Toolbar-button with different icons depending on the platform. -->
-                    <ons-toolbar-button component="button/menu" id="menubtn">
-                        <ons-icon icon="ion-navicon, material:md-menu" size="32px, material:24px"></ons-icon>
-                    </ons-toolbar-button>
-                </div>
-                <div class="center">Todos</div>
-                <div class="right">
-                    <!-- Toolbar-button  only visible for iOS/other. -->
-                    <ons-if platform="ios other">
-                        <ons-toolbar-button component="button/new-task">New</ons-toolbar-button>
-                    </ons-if>
-                </div>
-            </ons-toolbar>
-
-      
-            <ons-tabbar id="myTabbar" position="auto" style="background-color: rgb(255, 163, 26);">
-                    <ons-tab page="html/tab/tab1.html"  active >
-                        <ons-toolbar-button modifier="quiet">
-                                <i class="fas fa-utensils AlpacaNavIcon">
-                                    <div class="AlpacaNavText">ใกล้ฉัน</div>
-                                </i>
-<!-- begin of bottom toolbar -->
-<ons-bottom-toolbar style="height: 55px ;">
-        <ons-row class="AlpacaNavbar">
-            <ons-col width="20%" class="AlpacaNavBlock AlpacaCurrent">
-                <ons-toolbar-button modifier="quiet">
-                    <i class="fas fa-utensils AlpacaNavIcon">
-                        <div class="AlpacaNavText">ใกล้ฉัน</div>
-                    </i>
-                </ons-toolbar-button>
-            </ons-col>
-            <ons-col width="20%" class="AlpacaNavBlock">
-                <ons-toolbar-button modifier="quiet">
-                    <i class="fas fa-heart AlpacaNavIcon">
-                        <div class="AlpacaNavText">เมนูโปรด</div>
-                    </i>
-                </ons-toolbar-button>
-            </ons-col>
-            <ons-col width="20%" class="AlpacaNavBlock">
-                <ons-toolbar-button modifier="quiet">
-                    <i class="fas fa-clipboard AlpacaNavIcon">
-                        <div class="AlpacaNavText">ประเภท</div>
-                    </i>
-                </ons-toolbar-button>
-            </ons-col>
-            <ons-col width="20%" class="AlpacaNavBlock">
-                <ons-toolbar-button modifier="quiet">
-                    <i class="fas fa-star AlpacaNavIcon">
-                        <div class="AlpacaNavText">โปรโมชั่น</div>
-                    </i>
-                </ons-toolbar-button>
-            </ons-col>
-            <ons-col width="20%" class="AlpacaNavBlock">
-                <ons-toolbar-button modifier="quiet">
-                    <i class="fas fa-cog AlpacaNavIcon">
-                        <div class="AlpacaNavText">ตั้งค่า</div>
-                    </i>
-                </ons-toolbar-button>
-            </ons-col>
-        </ons-row>
-    </ons-bottom-toolbar>
-    <!-- End of bottom toolbar -->
-
-
-        </ons-page>
-
-    </template>
-
 </body>
-
-
 
 </html>
