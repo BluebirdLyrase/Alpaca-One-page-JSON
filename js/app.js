@@ -81,6 +81,16 @@ document.addEventListener('init', function (event) {
         document.querySelector('ons-navigator').resetToPage('splitter.html');
     });
 
+    $("#facebookbtn").click(function () {
+        console.log("signinbtn pressed");
+        document.querySelector('ons-navigator').resetToPage('splitter.html');
+    });
+
+    $("#googlebtn").click(function () {
+        console.log("signinbtn pressed");
+        document.querySelector('ons-navigator').resetToPage('splitter.html');
+    });
+
     $("#regisbtn2").click(function () {
         console.log('regisbtn pressed');
         content.load('regis.html')
