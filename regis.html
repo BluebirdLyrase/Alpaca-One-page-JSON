@@ -1,5 +1,37 @@
 <ons-page id="regis">
-    <ons-toolbar>
-        <div class="center">regis</div>
-    </ons-toolbar>
+    <ons-row>
+        <ons-toolbar style="height: 55px; background-color: rgb(255, 163, 26);">
+            <ons-col width="20%">
+                <!-- Toolbar-button with different icons depending on the platform. -->
+                <ons-toolbar-button id="backbtn" style="margin-top:7.5px">
+                    <i class="fas fa-arrow-left AlpacaIconBig"></i>
+                </ons-toolbar-button>
+            </ons-col>
+            <ons-col width="60%">
+                <div style="margin-top:13px; color:white; font-size: 25px; text-align:center" id="title">Register</div>
+            </ons-col>
+            <ons-col width="20%"></ons-col>
+        </ons-toolbar>
+    </ons-row>
+    <ons-card style="margin-top: 65px;">
+        <div style="text-align: center; margin-top: 20px;">
+            <p>
+                <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
+            </p>
+            <p>
+                <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+            </p>
+            <p>
+                <ons-input id="password2" modifier="underbar" type="password" placeholder="Confirm Password" float>
+                </ons-input>
+            </p>
+            <p>
+                <ons-input id="Email" modifier="underbar" type="Email" placeholder="Email" float>
+                </ons-input>
+            </p>
+            <p style="margin-top:10px;">
+                <ons-button id="regisNsigninbtn" style="background-color: rgb(255, 163, 26);">Register and Sign-in</ons-button>
+            </p>
+        </div>
+    </ons-card>
 </ons-page>

@@ -1,14 +1,33 @@
 <ons-page id="Login">
+
+    <ons-row>
         <ons-toolbar style="height: 55px; background-color: rgb(255, 163, 26);">
-                <div class="left">
-                    <!-- Toolbar-button with different icons depending on the platform. -->
-                    <ons-toolbar-button  id="backbtn">
-                        <i class="fas fa-arrow-left AlpacaIconBig"></i>
-                    </ons-toolbar-button>
-                </div>
+            <ons-col width="20%">
+                <!-- Toolbar-button with different icons depending on the platform. -->
+                <ons-toolbar-button id="backbtn" style="margin-top:7.5px">
+                    <i class="fas fa-arrow-left AlpacaIconBig"></i>
+                </ons-toolbar-button>
+            </ons-col>
+            <ons-col width="60%">
+                <div style="margin-top:13px; color:white; font-size: 25px; text-align:center" id="title">Login</div>
+            </ons-col>
+            <ons-col width="20%"></ons-col>
+        </ons-toolbar>
+    </ons-row>
+    
+    <ons-card style="margin-top: 65px;">
+    <div style="text-align: center; margin-top: 20px;">
         
-                <div class="center" style=" color:white; font-size: 25px; text-align:center;">Login</div>
-        
-  </ons-back-button>
-            </ons-toolbar>
+            <p>
+              <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
+            </p>
+            <p>
+              <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+            </p>
+            <p style="margin-top: 30px;">
+              <ons-button id="signinbtn" style="background-color: rgb(255, 163, 26);">Sign in</ons-button>
+            </p>
+            Dont have an acount?<span id="regisbtn2" style="color:blue"><b> register here! </b></span>
+          </div>
+        </ons-card>
 </ons-page>

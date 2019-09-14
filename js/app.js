@@ -49,17 +49,20 @@ document.addEventListener('init', function (event) {
     if (page.id === "sidemenu") {
         //Code for sidemenu
         $("#regisbtn").click(function () {
+            console.log('regisbtn pressed');
             var content = document.getElementById('content');
             var menu = document.getElementById('menu');
             content.load('regis.html')
                 .then(menu.close.bind(menu));
         });
         $("#loginbtn").click(function () {
+            console.log('loginbtn pressed');
             var content = document.getElementById('content');
             var menu = document.getElementById('menu');
             content.load('login.html')
                 .then(menu.close.bind(menu));
         });
+
     }
 
     $("#backbtn").click(function () {
@@ -72,5 +75,20 @@ document.addEventListener('init', function (event) {
             alert("Hello");
         });
     }
+
+    $("#signinbtn").click(function () {
+        console.log("signinbtn pressed");
+        document.querySelector('ons-navigator').resetToPage('splitter.html');
+    });
+
+    $("#regisbtn2").click(function () {
+        console.log('regisbtn pressed');
+        content.load('regis.html')
+    });
+
+    $("#regisNsigninbtn").click(function () {
+        console.log("signinbtn pressed");
+        document.querySelector('ons-navigator').resetToPage('splitter.html');
+    });
 
 });
