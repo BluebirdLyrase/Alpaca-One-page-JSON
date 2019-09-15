@@ -1,0 +1,41 @@
+[
+    {
+        "ResturantName": "Sheddo Sishi Cottage",
+        "img": "img/1.jpg",
+        "Distance": 9.52,
+        "Status": "Open",
+        "Food": [
+            {
+                "Foodname": "Nigirizushi",
+                "Price": "40"
+            },
+            {
+                "Foodname": "Gunkanmaki",
+                "Price": "50"
+            },
+            {
+                "Foodname": "Oshizushi",
+                "Price": "60"
+            },
+            {
+                "Foodname": "Inarizushi",
+                "Price": "40"
+            },
+            {
+                "Foodname": "Makizushi",
+                "Price": "20"
+            },
+            {
+                "Foodname": "Chirashizushi",
+                "Price": "999"
+            }
+        ]
+    },
+    {
+        "ResturantName": "Sheddo Sishi Cottage",
+        "img": "img/1.jpg",
+        "Distance": 1.42,
+        "Status": "Close",
+        "Food": []
+    }
+]
