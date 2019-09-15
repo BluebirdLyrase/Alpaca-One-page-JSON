@@ -81,11 +81,11 @@ document.addEventListener('init', function (event) {
         console.log("signinbtn pressed");
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-      
+
         if (username === 'Admin' && password === '123') {
-          document.querySelector('ons-navigator').resetToPage('splitter.html');
+            document.querySelector('ons-navigator').resetToPage('splitter.html');
         } else {
-          ons.notification.alert('Incorrect username or password.');
+            ons.notification.alert('Incorrect username or password.');
         }
 
     });
@@ -110,31 +110,54 @@ document.addEventListener('init', function (event) {
         document.querySelector('ons-navigator').resetToPage('splitter.html');
     });
 
-/////////////////////Append Resturant Card////////////////////////////////////
+    /////////////////////Append Resturant Card////////////////////////////////////
     if (page.id === "Resturant") {
         $.get("js/data.json", function (data, status) {
             for (var index in data) {
                 var Res = data[index];
-                var Rescard = '<ons-card style="height : auto; margin-top:0px;" onclick="setID(`'+index+'`)"><ons-row>';
+                var Rescard = '<ons-card style="height : auto; margin-top:0px;" onclick="setIDtoFoodMenu(`' + index + '`)"><ons-row>';
                 Rescard += '<ons-col width="25%"><img src=' + Res.img + ' alt="Onsen UI"style="width: 65px; height :55px;"></ons-col>';
                 Rescard += '<ons-col width="75%">';
                 Rescard += '<div style="font-size: 17px; white-space: nowrap;">&nbsp;&nbsp;<b>' + Res.ResturantName + '</b></div>';
-                Rescard += '<div style="color:grey">&nbsp;&nbsp;&nbsp;Distance : '+Res.Distance+'</div>';
-                Rescard += '<ons-row>';
-                Rescard += '<ons-col></ons-col>'; //for starrate
-                Rescard += '<ons-col width="25%"  style="text-align: right ;color:green;" ><b>'+Res.Status+'</b></ons-col>';
+                Rescard += '<div style="color:grey">&nbsp;&nbsp;&nbsp;Distance : ' + Res.Distance + '</div>';
+                Rescard += '<ons-row>&nbsp;&nbsp;';
+                Rescard += '<ons-col>'; //for starrate
+                for (var i = Res.Star; i > 0; i--) {
+                    Rescard += '<i class="fas fa-star" style="color: rgb(255, 163, 26)"></i>';
+                }
+                for (var i = (5 - Res.Star); i > 0; i--) {
+                    Rescard += '<i class="fas fa-star" style="color:grey"></i>';
+                }
+                Rescard += '</ons-col width="55%">';
+                if (Res.Status === "open") Rescard += '<ons-col width="25%"  style="text-align: right ;color:green;" ><b>Open</b></ons-col>';
+                else if (Res.Status === "close") Rescard += '<ons-col width="25%"  style="text-align: right ;color:red;" ><b>Close</b></ons-col>';
+                else Rescard += '<ons-col width="45%"  style="text-align: right ;color:grey;" ><b>Unknown</b></ons-col>';
+
+
                 Rescard += '</ons-row></ons-col></ons-row></ons-card>'
                 console.log(Rescard);
-                $('#test').append(Rescard);
+                $('#Resturantcard').append(Rescard);
             }
+
+
         });
     }
 });
 ///////////////////////End of Append Resturant Card///////////////////////////////////////
-function setID(ID){
-    localStorage.setItem("selected",ID);
-    console.log(ID);
-}
 
+function setIDtoFoodMenu(ID) {
+    console.log("card pressed");
+    localStorage.setItem("selected", ID);
+    console.log(ID);
+    content.load('Food.html')
+    $.get("js/data.json", function (data, status) {
+        var Res = data[ID];
+        console.log(Res.ResturantName);
+
+    });
+
+
+    
+}
 
 

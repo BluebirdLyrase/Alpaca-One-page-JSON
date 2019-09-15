@@ -3,7 +3,9 @@
         "ResturantName": "Sheddo Sishi Cottage",
         "img": "img/1.jpg",
         "Distance": 9.52,
-        "Status": "Open",
+        "Status": "open",
+        "Star": 5,
+        "Reviewer": 22,
         "Food": [
             {
                 "Foodname": "Nigirizushi",
@@ -32,10 +34,13 @@
         ]
     },
     {
-        "ResturantName": "Sheddo Sishi Cottage",
-        "img": "img/1.jpg",
+        "ResturantName": "Pic From Google",
+        "img": "img/2.jpg",
         "Distance": 1.42,
-        "Status": "Close",
+        "Status": "open",
+        "Star":0,
+        "Reviewer": 12,
         "Food": []
     }
+
 ]
